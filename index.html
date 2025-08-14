@@ -65,6 +65,10 @@
         section:nth-of-type(2) { animation-delay: 0.6s; }
         section:nth-of-type(3) { animation-delay: 0.9s; }
         section:nth-of-type(4) { animation-delay: 1.2s; }
+        section.btn-section {
+            margin-top: 0;
+            animation-delay: 1.5s;
+        }
         @keyframes fadeInUp {
             to {
                 opacity: 1;
@@ -111,6 +115,46 @@
             animation: fadeInUp 1s ease forwards;
             animation-delay: 1.8s;
         }
+        footer a {
+            color: #00d8ff;
+            text-decoration: underline;
+        }
+        footer a:hover {
+            color: #00aaff;
+        }
+        /* Blue animated button */
+        .btn-animated {
+            display: inline-block;
+            background: #007bff; /* bright blue */
+            color: #fff;
+            font-weight: 600;
+            padding: 0.75rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 0 15px #007bffaa, 0 0 30px #00aaff66;
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+            font-size: 1.1rem;
+            user-select: none;
+            cursor: pointer;
+            /* animation: glowing 2.5s infinite alternate; Uncomment to glow continuously */
+        }
+        .btn-animated:hover {
+            box-shadow:
+              0 0 20px #00aaffee,
+              0 0 40px #00c3ffcc,
+              0 0 60px #00d9ff99;
+            transform: scale(1.05);
+        }
+        /*
+        @keyframes glowing {
+          0% {
+            box-shadow: 0 0 15px #007bffaa, 0 0 30px #00aaff66;
+          }
+          100% {
+            box-shadow: 0 0 25px #00aaffee, 0 0 50px #00c3ffcc;
+          }
+        }
+        */
         @media (max-width: 600px) {
             header h1 {
                 font-size: 1.5rem;
@@ -161,9 +205,14 @@ print 10 / 0;    # Error: division by zero
                 <li>Unexpected token</li>
             </ul>
         </section>
+        <section class="btn-section" style="text-align: center;">
+            <a href="https://git.sr.ht/~msdr/EmbLang" target="_blank" rel="noopener noreferrer" class="btn-animated">
+                Get it from Sourcehut
+            </a>
+        </section>
     </main>
-<footer>
-    &copy; 2025 Emblang Project | Developed by <a href="https://git.sr.ht/~msdr" target="_blank" rel="noopener noreferrer" style="color: #00d8ff; text-decoration: underline;">MsDr</a>
-</footer>
+    <footer>
+        &copy; 2025 Emblang Project | Developed by <a href="https://git.sr.ht/~msdr" target="_blank" rel="noopener noreferrer">MsDr</a>
+    </footer>
 </body>
 </html>
